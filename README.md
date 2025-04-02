@@ -81,7 +81,7 @@ The components should be sandwiched as follows.
 18.	Connect the printer to mains and power it on.
 
 19.	Add the following to your printer.cfg to add assisted bed tramming.
-`[bed_screws]
+[bed_screws]
 screw1: 175,175
 screw1_name: Centre
 screw2: 13,13
@@ -102,9 +102,9 @@ screw9: 338,338
 screw9_name: BackRight
 horizontal_move_z: 2
 speed: 400
-probe_speed: 3`
+probe_speed: 3
 
-`[screws_tilt_adjust]
+[screws_tilt_adjust]
 screw1: 191,166
 screw1_name: Centre
 screw2: 28,3
@@ -125,7 +125,7 @@ screw9: 353,328
 screw9_name: BackRight
 horizontal_move_z: 2
 speed: 400
-screw_thread: CCW-M4`
+screw_thread: CCW-M4
 
 The [bed_screws] section tells Klipper the location of the actual screws and the [screws_tilt_adjust] tells Klipper where to locate the nozzle so that the probe is as close above the screws as possible. 
 You can work this out by taking the screw location and adjusting it by the probe x and y offset
