@@ -81,28 +81,50 @@ The components should be sandwiched as follows.
 18.	Connect the printer to mains and power it on.
 
 19.	Add the following to your printer.cfg to add assisted bed tramming.
-[bed_screws]
+    
+`[bed_screws]
+
 screw1: 175,175
+
 screw1_name: Centre
+
 screw2: 13,13
+
 screw2_name: FrontLeft
+
 screw3: 176,13
+
 screw3_name: FrontMid
+
 screw4: 338,13
+
 screw4_name: FrontRight
+
 screw5: 13,176
+
 screw5_name: MidLeft
+
 screw6: 338,176
+
 screw6_name: Mid Right
+
 screw7: 13,338
+
 screw7_name: BackLeft
+
 screw8: 176,338
+
 screw8_name: BackMid
+
 screw9: 338,338
+
 screw9_name: BackRight
+
 horizontal_move_z: 2
+
 speed: 400
-probe_speed: 3
+
+probe_speed: 3`
 
 [screws_tilt_adjust]
 screw1: 191,166
