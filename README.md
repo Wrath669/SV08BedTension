@@ -81,7 +81,8 @@ The components should be sandwiched as follows.
 18.	Connect the printer to mains and power it on.
 
 19.	Add the following to your printer.cfg to add assisted bed tramming.
-    
+
+```
 [bed_screws]
 screw1: 175,175
 screw1_name: Centre
@@ -127,38 +128,46 @@ screw9_name: BackRight
 horizontal_move_z: 2
 speed: 400
 screw_thread: CCW-M4
+```
 
-The [bed_screws] section tells Klipper the location of the actual screws and the [screws_tilt_adjust] tells Klipper where to locate the nozzle so that the probe is as close above the screws as possible. 
+The `[bed_screws]` section tells Klipper the location of the actual screws and the `[screws_tilt_adjust]` tells Klipper where to locate the nozzle so that the probe is as close above the screws as possible. 
 You can work this out by taking the screw location and adjusting it by the probe x and y offset
 
 20.	Save the printer.cfg and then either save and restart or send save_config in the console.
-
-DO NOT PERFORM QUAD GANTRY LEVEL until we reach a stage later on when this is instructed.
+> [!IMPORTANT]  
+> DO NOT PERFORM QUAD GANTRY LEVEL until we reach a stage later on when this is instructed.
 
 21.	Manually tram your gantry. 
 Either with the plastic chassis at the bottom or with the frame at the top. You need to tram the gantry square by lowering and raising each corner by hand until they are all the same height distance to a static part of the printer that is not the bed. Spend a lot of time on this until you are very satisfied that it is all square. We do this because we are going to then tram the bed to the gantry in the next step.
 
-
-22.	Send the command ‘SET_KINEMATIC_POSITION Z=0’
+22.	Send the command `SET_KINEMATIC_POSITION Z=0`
 This lets us move the z steppers without homing.
 
 23.	Move the gantry up a small amount to engage the steppers and lock your tram in place. 
-Either through web/screen interface or the command ‘_CLIENT_LINEAR_MOVE Z=10 F=1500’
+Either through web/screen interface or the command `_CLIENT_LINEAR_MOVE Z=10 F=1500`
 
 24.	Measure your tram again, ensure you’re still happy with it.
 Adjust as follows to make any small corrections using these console commands
 
 Move Z3, the front left stepper:
+```
 FORCE_MOVE STEPPER=stepper_z DISTANCE=<value> VELOCITY=1
+```
 
 Move Z4, the front right stepper:
+```
 FORCE_MOVE STEPPER=stepper_z3 DISTANCE=<value> VELOCITY=1
+```
 
 Move Z1, the back right stepper:
+```
 FORCE_MOVE STEPPER=stepper_z1 DISTANCE=<value> VELOCITY=1
+```
 
 Move Z2, the back left stepper:
+```
 FORCE_MOVE STEPPER=stepper_z2 DISTANCE=<value> VELOCITY=1
+```
 
 Note that the labels on the printer do not match the stepper name number as defined in Klipper’s config.
 
@@ -166,9 +175,10 @@ Note that the labels on the printer do not match the stepper name number as defi
 60c for PLA, 100c for ABS etc.
 
 26.	Home the printer.
-AGAIN, DO NOT PERFORM A QGL OR THIS WILL UNDO YOUR MANUAL TRAM!
+> [!IMPORTANT]  
+> AGAIN, DO NOT PERFORM A QGL OR THIS WILL UNDO YOUR MANUAL TRAM!
 
-27.	Send the command ‘screws_tilt_calculate’
+27.	Send the command `screws_tilt_calculate`.
 The printer will now go and probe the build plate above each screw location.
 
 28.	Klipper will return the adjustments values. These work like a clock. Giving you a rotation distance to turn each screw with your hex key. For example 00:30 is 180 degrees, 00:15 is 90 degrees, 1 is a full rotation of 360 degrees. 00:40 is 225 degrees. CW and CCW denote clockwise and counter-clockwise. 
