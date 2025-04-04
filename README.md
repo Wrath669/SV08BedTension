@@ -21,6 +21,8 @@ Calipers
 
 Bolt hole finder https://www.printables.com/model/950417-sovol-sv08-bed-bolts-finder 
 
+**Note, you will need to modify the chassis brush cleaner module to raise it to your new bed height which I reccomend doing once it is tuned as the height will be variable.**
+
 1.	Disconnect your printer from mains power.
 
 2.	Open the bottom of your printer, disconnect the bed heating cables from the power board. *Exercise caution when working with the printer’s power supply circuits, do not touch capacitors*
