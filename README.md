@@ -4,15 +4,21 @@
 ![image](https://github.com/user-attachments/assets/cab7eb79-8321-4487-9588-2db5ac1d2235)
 
 Materials required:
+
 9 x 4mm ID 20mm OD washers 
+
 9 x 20mm M4 Countersunk screws (18mm length also fine)
-9 x 4mm ID 16mm OD 12mm height silicone spacers (Typically sold for i3 3d printer beds to replace springs)
+
+9 x 4mm ID 16mm OD 12mm height silicone spacers (Typically sold for i3 3d printer beds to replace springs) 
 https://www.aliexpress.com/item/1005007045883147.html
  ![image](https://github.com/user-attachments/assets/c2a88624-3c5f-48f4-8351-21e68db8acea)
 
 Tools of benefit:
+
 Calipers
+
 9mm or 10mm hole punch
+
 Bolt hole finder https://www.printables.com/model/950417-sovol-sv08-bed-bolts-finder 
 
 1.	Disconnect your printer from mains power.
